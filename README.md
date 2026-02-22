@@ -30,20 +30,20 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 Поднял инстанс MySQL через Docker, подключился к нему через DBeaver и WSL.
 
 Создал пользователя sys_temp, выполнил запрос на получение списка пользователей:
-![Список пользователей]()
+![Список пользователей](https://github.com/murtazinilyas/12-02_SQL_introduction/blob/main/scshots/t1-1.png)
 
 Дал все права пользователю sys_temp, выполнил запрос на получение списка прав для него:
-![Список прав пользователя sys_temp]()
+![Список прав пользователя sys_temp](https://github.com/murtazinilyas/12-02_SQL_introduction/blob/main/scshots/t1-2.png)
 
 Скачал дамп базы данных sakila, создал базу данных с тем же именем на своем инстансе и восстановил в нее дамп.
 
 ER-диаграмма в DBeaver:
 
-![ER-диаграмма в DBeaver]()
+![ER-диаграмма в DBeaver](https://github.com/murtazinilyas/12-02_SQL_introduction/blob/main/scshots/t1-3.png)
 
 Список всех таблиц в получившейся БД в консоли:
 
-![Список таблиц базы данных sakila в консоли]()
+![Список таблиц базы данных sakila в консоли](https://github.com/murtazinilyas/12-02_SQL_introduction/blob/main/scshots/t1-4.png)
 
 Простыня запросов:
 
@@ -90,7 +90,9 @@ WHERE
     AND CONSTRAINT_NAME = 'PRIMARY';
 ```
 
-![Получившаяся таблица]()
+![Получившаяся таблица](https://github.com/murtazinilyas/12-02_SQL_introduction/blob/main/scshots/t2.png)
+
+P.S. В итоговую таблицу попали только таблицы с первичным ключом, без представлений (в вопросах и ответах Юрий Новиков студенту сказал их не включать).
 
 ### Задание 3*
 3.1. Уберите у пользователя sys_temp права на внесение, изменение и удаление данных из базы sakila.
@@ -106,7 +108,7 @@ WHERE
 Далее забрал права на внесение, изменение и удаление данных из базы sakila.
 Выполнил запрос на получение списка прав:
 
-![Список прав пользователя sys_temp]()
+![Список прав пользователя sys_temp](https://github.com/murtazinilyas/12-02_SQL_introduction/blob/main/scshots/t3.png)
 
 Простыня запросов:
 ```SQL
